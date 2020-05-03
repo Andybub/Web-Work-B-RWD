@@ -1,0 +1,379 @@
+$light-grey: #EAEAEA;
+
+%anchorSetting {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+}
+
+%verticalCenter {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%navSetting {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2.5;
+}
+
+%titleSetting {
+    @extend %anchorSetting;
+    position: relative;
+    width: 100%;
+    background-color: $light-grey;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    margin-bottom: 5px;
+    > i {
+        position: absolute;
+        right: 0;
+    }
+    &:hover {
+        background-color: red;
+        color: #fff;
+    }
+}
+
+%thumbnailCover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);
+    opacity: 0;
+    transition: all 0.3s linear;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x:hidden;
+}
+
+img {
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+h1, h3 {
+    margin: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+    
+header {
+    text-align: center;
+    .header-top {
+        background-color: $light-grey;
+        .social-media {
+            padding: 15px;
+            > a {
+                @extend %anchorSetting;
+                transition: color 0.3s linear;
+                &:hover {
+                    color: #d21033;
+                }
+                > i {
+                    font-size: 30px;
+                }
+            }
+        }
+        .mail {
+            padding-bottom: 30px;
+            > a {
+                @extend %anchorSetting;
+                text-transform: capitalize;
+                line-height: 20px;
+                transition: color 0.3s linear;
+                &:hover {
+                    color: #d21033;
+                }
+                > i {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .header-bottom {
+        position: relative;
+        height: 115px;
+        > a {
+            @extend %anchorSetting;
+            &.menu {
+                position: absolute;
+                float: left;
+                left: 10px;
+                @extend %verticalCenter;
+                > i {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    > nav {
+        display: none;
+        text-transform: uppercase;
+        text-align: left;
+        padding-bottom: 20px;
+        > h1 {
+            @extend %navSetting;
+            position: relative;
+            left: 50px;
+        }
+        > ul {
+            position: relative;
+            left: 60px;
+            > li {
+                > a {
+                    @extend %anchorSetting;
+                    @extend %navSetting;
+                }
+            }
+        }
+    }
+}
+
+.background {
+    height: 425px;
+    background-color: #000;
+    background: {
+        image: url(https://via.placeholder.com/1400x425);
+        repeat: no-repeat;
+        position: center;
+    }
+}
+
+main {
+    .container {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 20px;
+        > div {
+            > div {
+                margin-bottom: 40px;
+            }
+        }
+        .new-arrival {
+            .title {
+                @extend %titleSetting;
+            }
+            .word-on-img {
+                @extend %anchorSetting;
+                position: relative;
+                .white {
+                    position: absolute;
+                    width: 100%;
+                    color: #fff;
+                    font-size: 40px;
+                    text-align: center;
+                    @extend %verticalCenter;
+                    > span {
+                        font-size: 60px;
+                    }
+                }
+                .cover {
+                    @extend %thumbnailCover;
+                }
+            }
+        }
+        .trendy {
+            .title {
+                @extend %titleSetting;
+            }
+            .products {
+                .col-6 {
+                    float: left;
+                    width: 50%;
+                    padding: 10px;
+                    .product-info {
+                        @extend %anchorSetting;
+                        .thumbnail {
+                            position: relative;
+                            .cover {
+                                @extend %thumbnailCover;
+                            }
+                        }
+                        .product-name {
+                            width: 100%;
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        .lifestyle {
+            .title {
+                @extend %titleSetting;
+            }
+            .thumbnail {
+                @extend %anchorSetting;
+                position: relative;
+                .cover {
+                    @extend %thumbnailCover;
+                }
+            }
+        }
+        .reviews {
+            .title {
+                @extend %titleSetting;
+            }
+            > div {
+                background: {
+                    image: url(https://via.placeholder.com/768x320);
+                    position: center;
+                    repeat: no-repeat;
+                    size: cover;
+                }
+                > div {
+                    width: 90%;
+                    margin: 0 auto;
+                    padding: 50px 0;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 300;
+                    line-height: 1.5;
+                }
+            }
+        }
+        .press {
+            .title {
+                @extend %titleSetting;
+            }
+            .thumbnail {
+                @extend %anchorSetting;
+                position: relative;
+                width: 100%;
+                .cover {
+                    @extend %thumbnailCover;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .footer-top {
+        background-color: $light-grey;
+        text-align: center;
+        padding: 20px;
+        letter-spacing: 1px;
+        > h1 {
+            display: inline-block;
+            font-weight: 400;
+            font-size: 30px;
+        }
+        > a {
+            @extend %anchorSetting;
+            text-transform: capitalize;
+            text-decoration: underline;
+            margin-left: 30px;
+            font-size: 20px;
+        }
+    }
+    .footer-bottom {
+        text-align: center;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        font-size: 15px;
+        padding: 30px;
+        > a {
+            @extend %anchorSetting;
+            margin-right: 15px;
+        }
+        > h3 {
+            display: inline-block;
+            font-weight: 300;
+        }
+    }
+}
+
+#go-top {
+    @extend %anchorSetting;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    color: #fff;
+    background-color: #000;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    transition: all 0.3s linear;
+    &:hover {
+        color: #000;
+        background-color: #d6b161;
+    }
+}
+
+@media (min-width: 768px) {
+
+    header .header-top .social-media {
+        float: left;
+    }
+
+    header .header-top .mail {
+        float: right;
+        padding: 0;
+        padding-right: 40px;
+        font-size: 25px;
+        line-height: 64px;
+    }
+
+    header .header-top .mail > a > i {
+        font-size: 30px;
+    }
+
+    .flex-left, .flex-right {
+        display: inline-flex;
+        flex-direction: column;
+        width: 49%;
+    }
+
+    .flex-left {
+        float: left;
+    }
+
+    .flex-right {
+        float: right;
+    }
+
+    main .container .new-arrival .word-on-img .white {
+        font-size: 1.2rem;
+        > span {
+            font-size: 2rem;
+        }
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    main .container {
+        max-width: 1024px;
+    }
+
+}

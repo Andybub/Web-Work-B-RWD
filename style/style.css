@@ -1,0 +1,342 @@
+main .container .new-arrival .title, main .container .trendy .title, main .container .lifestyle .title, main .container .reviews .title, main .container .press .title, header .header-top .social-media > a, header .header-top .mail > a, header .header-bottom > a, header > nav > ul > li > a, main .container .new-arrival .word-on-img, main .container .trendy .products .col-6 .product-info, main .container .lifestyle .thumbnail, main .container .press .thumbnail, footer .footer-top > a, footer .footer-bottom > a, #go-top {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+header .header-bottom > a.menu, main .container .new-arrival .word-on-img .white {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+header > nav > h1, header > nav > ul > li > a {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 2.5;
+}
+
+main .container .new-arrival .title, main .container .trendy .title, main .container .lifestyle .title, main .container .reviews .title, main .container .press .title {
+  position: relative;
+  width: 100%;
+  background-color: #EAEAEA;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+main .container .new-arrival .title > i, main .container .trendy .title > i, main .container .lifestyle .title > i, main .container .reviews .title > i, main .container .press .title > i {
+  position: absolute;
+  right: 0;
+}
+
+main .container .new-arrival .title:hover, main .container .trendy .title:hover, main .container .lifestyle .title:hover, main .container .reviews .title:hover, main .container .press .title:hover {
+  background-color: red;
+  color: #fff;
+}
+
+main .container .new-arrival .word-on-img .cover, main .container .trendy .products .col-6 .product-info .thumbnail .cover, main .container .lifestyle .thumbnail .cover, main .container .press .thumbnail .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+main .container .new-arrival .word-on-img .cover:hover, main .container .trendy .products .col-6 .product-info .thumbnail .cover:hover, main .container .lifestyle .thumbnail .cover:hover, main .container .press .thumbnail .cover:hover {
+  opacity: 1;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+img {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+h1, h3 {
+  margin: 0;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+header {
+  text-align: center;
+}
+
+header .header-top {
+  background-color: #EAEAEA;
+}
+
+header .header-top .social-media {
+  padding: 15px;
+}
+
+header .header-top .social-media > a {
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+header .header-top .social-media > a:hover {
+  color: #d21033;
+}
+
+header .header-top .social-media > a > i {
+  font-size: 30px;
+}
+
+header .header-top .mail {
+  padding-bottom: 30px;
+}
+
+header .header-top .mail > a {
+  text-transform: capitalize;
+  line-height: 20px;
+  -webkit-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+header .header-top .mail > a:hover {
+  color: #d21033;
+}
+
+header .header-top .mail > a > i {
+  font-size: 20px;
+}
+
+header .header-bottom {
+  position: relative;
+  height: 115px;
+}
+
+header .header-bottom > a.menu {
+  position: absolute;
+  float: left;
+  left: 10px;
+}
+
+header .header-bottom > a.menu > i {
+  font-size: 30px;
+}
+
+header > nav {
+  display: none;
+  text-transform: uppercase;
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+header > nav > h1 {
+  position: relative;
+  left: 50px;
+}
+
+header > nav > ul {
+  position: relative;
+  left: 60px;
+}
+
+.background {
+  height: 425px;
+  background-color: #000;
+  background-image: url(https://via.placeholder.com/1400x425);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main .container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main .container > div > div {
+  margin-bottom: 40px;
+}
+
+main .container .new-arrival .word-on-img {
+  position: relative;
+}
+
+main .container .new-arrival .word-on-img .white {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+}
+
+main .container .new-arrival .word-on-img .white > span {
+  font-size: 60px;
+}
+
+main .container .trendy .products .col-6 {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+main .container .trendy .products .col-6 .product-info .thumbnail {
+  position: relative;
+}
+
+main .container .trendy .products .col-6 .product-info .product-name {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+main .container .trendy .products .col-6 .product-info:hover {
+  color: red;
+}
+
+main .container .lifestyle .thumbnail {
+  position: relative;
+}
+
+main .container .reviews > div {
+  background-image: url(https://via.placeholder.com/768x320);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .container .reviews > div > div {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+main .container .press .thumbnail {
+  position: relative;
+  width: 100%;
+}
+
+footer .footer-top {
+  background-color: #EAEAEA;
+  text-align: center;
+  padding: 20px;
+  letter-spacing: 1px;
+}
+
+footer .footer-top > h1 {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+footer .footer-top > a {
+  text-transform: capitalize;
+  text-decoration: underline;
+  margin-left: 30px;
+  font-size: 20px;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 15px;
+  padding: 30px;
+}
+
+footer .footer-bottom > a {
+  margin-right: 15px;
+}
+
+footer .footer-bottom > h3 {
+  display: inline-block;
+  font-weight: 300;
+}
+
+#go-top {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  color: #fff;
+  background-color: #000;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 30px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+#go-top:hover {
+  color: #000;
+  background-color: #d6b161;
+}
+
+@media (min-width: 768px) {
+  header .header-top .social-media {
+    float: left;
+  }
+  header .header-top .mail {
+    float: right;
+    padding: 0;
+    padding-right: 40px;
+    font-size: 25px;
+    line-height: 64px;
+  }
+  header .header-top .mail > a > i {
+    font-size: 30px;
+  }
+  .flex-left, .flex-right {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 49%;
+  }
+  .flex-left {
+    float: left;
+  }
+  .flex-right {
+    float: right;
+  }
+  main .container .new-arrival .word-on-img .white {
+    font-size: 1.2rem;
+  }
+  main .container .new-arrival .word-on-img .white > span {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  main .container {
+    max-width: 1024px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
